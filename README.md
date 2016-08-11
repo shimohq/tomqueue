@@ -1,10 +1,10 @@
-# leopard
+# TomQueue
 A FIFO queue with group-level concurrency support
 
 ## Install
 
 ```shell
-$ npm install leopard
+$ npm install tomqueue
 ```
 
 ## Usage
@@ -12,7 +12,7 @@ $ npm install leopard
 Dispatcher:
 
 ```javascript
-const Dispatcher = require('leopard').Dispatcher;
+const Dispatcher = require('tomqueue').Dispatcher;
 const dispatcher = new Dispatcher({
   port: 7446
 });
@@ -34,7 +34,7 @@ setTimeout(function () {
 Worker:
 
 ```javascript
-const Worker = require('leopard').Worker;
+const Worker = require('tomqueue').Worker;
 const worker = new Worker({
   handler(payload) {
     return processChangeset(payload);

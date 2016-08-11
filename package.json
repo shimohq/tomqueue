@@ -1,0 +1,27 @@
+{
+  "name": "leopard",
+  "version": "0.0.1",
+  "description": "A FIFO queue with group-level concurrency support",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shimohq/leopard.git"
+  },
+  "keywords": [
+    "queue",
+    "concurrency"
+  ],
+  "author": "luin <i@zihua.li>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shimohq/leopard/issues"
+  },
+  "homepage": "https://github.com/shimohq/leopard#readme",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "redis-parser": "^2.0.4"
+  }
+}

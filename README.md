@@ -48,3 +48,7 @@ function processChangeset(data) {
   return Promise.resolve(data);
 }
 ```
+
+## Payload
+
+The method `Dispatcher#send()` receives a payload object, which must contain a `channel` property representing which channel the payload should be sent to.

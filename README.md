@@ -26,7 +26,7 @@ setTimeout(function () {
     changeset: ''
   };
   dispatcher.send(payload).then((res) => {
-    console.log('==res', res);
+    console.log(res);
   }).catch(console.error);
 }, 3000);
 ```
@@ -44,7 +44,6 @@ const worker = new Worker({
 worker.start();
 
 function processChangeset(data) {
-  console.log('==!', data);
   return Promise.resolve(data);
 }
 ```

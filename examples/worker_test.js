@@ -1,6 +1,6 @@
 'use strict';
 
-const Worker = require('./').Worker;
+const Worker = require('../').Worker;
 
 const worker = new Worker({
   handler(payload) {
@@ -10,7 +10,17 @@ const worker = new Worker({
 
 worker.start();
 
+const queue = [];
+
 function processChangeset(data) {
-  console.log('==!', data);
-  return Promise.resolve(data);
+  return new Promise((resolve, reject) => {
+    queue.push({ resolve, data });
+  });
 }
+
+setInterval(() => {
+  const task = queue.shift();
+  if (task) {
+    task.resolve(task.data);
+  }
+}, 1000);

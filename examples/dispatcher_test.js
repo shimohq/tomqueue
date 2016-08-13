@@ -1,17 +1,17 @@
 'use strict';
 
-const Dispatcher = require('./').Dispatcher;
+const Dispatcher = require('../').Dispatcher;
 const dispatcher = new Dispatcher();
 
 dispatcher.start();
 
-setTimeout(function () {
+let rev = 1;
+setInterval(function () {
   const payload = {
-    channel: 'abc',
-    baseRev: 67,
-    changeset: ''
+    channel: 'abc' + rev,
+    rev: rev++
   };
   dispatcher.send(payload).then((res) => {
-    console.log('==res', res);
+    console.log(res);
   }).catch(console.error);
-}, 3000);
+}, 10);

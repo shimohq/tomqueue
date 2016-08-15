@@ -51,3 +51,17 @@ function processChangeset(data) {
 ## Payload
 
 The method `Dispatcher#send()` receives a payload object, which must contain a `channel` property representing which channel the payload should be sent to.
+
+## Storage
+
+TomQueue supports two storages. The default storage is memory based. To switch to the redis-based storage, set `storage` option to `"redis"`:
+
+```javascript
+const dispatcher = new Dispatcher({
+  port: 7446,
+  storage: 'redis',
+  storageOptions: {
+    redis: new Redis()
+  }
+});
+```

@@ -1,6 +1,6 @@
 {
   "name": "tomqueue",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A FIFO queue with group-level concurrency support",
   "main": "index.js",
   "scripts": {

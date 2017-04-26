@@ -23,7 +23,8 @@
   "dependencies": {
     "debug": "^2.2.0",
     "lodash": "^4.15.0",
-    "redis-parser": "^2.0.4"
+    "redis-parser": "^2.0.4",
+    "uuid": "^3.0.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",

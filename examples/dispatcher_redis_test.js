@@ -21,4 +21,4 @@ setInterval(function () {
   dispatcher.send(payload).then((res) => {
     console.log('send success: ', res);
   }).catch(console.error);
-}, 100);
+}, 1);

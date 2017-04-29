@@ -65,3 +65,19 @@ const dispatcher = new Dispatcher({
   }
 });
 ```
+
+## Options
+
+### Dispatcher
+* `port` **Optional** `Number` port the server listened.
+* `storage` **Optional** `String` Dispatcher storage, it can be `memory` or `redis`, *storageOptions* is required if you use *redis*. default `memory`.
+* `storageOptions` **Optional** `Object` should be an object with *redis*(as a redis instance) property.
+* `timeout` **Optional** `Number` Dispatcher send timeout, default `1000` ms.
+
+### Worker
+* `handler` **Required** `Function` payload handler.
+* `dispatcherPort` **Optional** `Number` Dispatcher server port.
+* `dispatcherHost` **Optional** `String` Dispatcher server host.
+* `retryStrategy` **Optional** `Function` return the time(ms) retry connect to dispatcher.
+
+

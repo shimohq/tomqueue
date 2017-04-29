@@ -23,4 +23,4 @@ setInterval(() => {
   if (task) {
     task.resolve(task.data);
   }
-}, 1000);
+}, 4);
